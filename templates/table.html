@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<body>
+<div class="btn-group-lg" role="button" aria-label="Basic example">
+    <a class="btn btn-success" type="submit" href="http://127.0.0.1:8088/"><h1>ИГРА</h1></a>
+    <a class="btn btn-success" type="submit" href="http://127.0.0.1:8088/shop"><h1>МАГАЗИН</h1></a>
+    <a class="btn btn-success" type="submit" href="http://127.0.0.1:8088/table"><h1>ПОМОЩЬ</h1></a>
+    <a class="btn btn-success" type="submit" href="http://127.0.0.1:8088/shaxta"><h1>ШАХТА</h1></a>
+    <a class="btn btn-success" type="submit" href="http://127.0.0.1:8088/mag"><h1>УРОВНИ</h1></a>
+</div>
+<p></p>
+<div class="card" style="width: 620px;height: 480px;">
+    <div class="card-body">
+        <h2 class="card-title">ТАБЛИЦА УМНОЖЕНИЯ</h2>
+        <p class="card-text">
+        <h2>{% for a in range(1,10) %}
+        <br>
+         {% for b in range(1,10) %}
+        {% if a*b <= 9 %}
+        <strong>&nbsp;&nbsp;{{+(a*b)}}&nbsp;&nbsp;</strong>
+        {%else%}
+            <strong>{{a*b}}&nbsp;&nbsp;</strong>{%endif%}{% endfor %}{% endfor %}</h2>
+    </div>
+</div>
+</body>
+</html>
